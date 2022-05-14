@@ -19,3 +19,18 @@ def test2(b):
 
 test2(a)
 print(a)
+
+#Escopo dentro da função
+def test3():
+    n = 5
+    def a():
+        n = 10
+    a()
+    print(n)
+    def b():
+        nonlocal n
+        n = 10
+    b()
+    print(n)
+
+test3()
